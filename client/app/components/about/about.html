@@ -1,0 +1,89 @@
+<main>
+  <nav class="navbar navbar-default" style="margin-bottom:30px">
+  <div>
+    <p class=" h1 text-center style" style="margin-top:5px">Storage Cost Comparision</p>
+  </div>
+</nav>
+
+
+<div class="col-md-12 col-lg-offset-0.2" style="background-color:ghostwhite " >
+
+  <div>
+     <div style="background-color:white" >
+
+  <table class="table table-bordered " style="margin-top:60px">
+
+    <thead style="background-color:#efebe9   ">
+      <tr >
+        <th class="text-center">SI NO</th>
+        <th class="text-center">YARD</th>
+        <th class="text-center">FREE DAYS</th>
+        <th class="text-center">COST PER DAYS(After Free Days)</th>
+<th class="text-center" colspan="12">AVERAGE STORE MONTHS </th>
+<th colspan="3" class="text-center">AVERAGE</th>
+
+
+ </tr>
+    </thead>
+    <tbody>
+      <tr style="background-color:#efebe9  ">
+      <td></td>
+      <td></td>
+       <td></td>
+       <td></td>
+       <td >12</td>
+       <td>11</td>
+<td>10</td>
+<td>9</td>
+<td>8</td>
+    <td>7</td>
+  <td>6</td>
+  <td>5</td>
+  <td>4</td>
+  <td>3</td>
+  <td>2</td>
+
+ <td>1</td>
+<td></td>
+</tr>
+      <tr ng-repeat="value in $ctrl.cost track by $index" ng-style="{{$ctrl.getCostComparision(value.YARD)}}" >
+      <!-- style="backgroundcolor: getRandomColor(x.YARD)" -->
+
+
+        <th scope="row">{{$index+1}}</th>
+        <td>{{value.YARD}}</td>
+<td>{{value.FREEDAYS}}</td>
+<td>{{value.COST_PER_DAYS}</td>
+<td>{{value.12}}</td>
+<td>{{value.11}}</td>
+<td>{{value.10}}</td>
+<td>{{value.9}}</td>
+<td>{{value.8}}</td>
+<td>{{value.7}}</td>
+<td>{{value.6}}</td>
+<td>{{value.5}}</td>
+<td>{{value.4}}</td>
+<td>{{value.3}}</td>
+<td>{{value.2}}</td>
+<td>{{value.1}}</td>
+<td>{{value.AVG}}</td>
+
+
+        </tr>
+<!--
+        <th scope="row">2</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@TwBootstrap</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr> -->
+    </tbody>
+  </table>
+</div>
+</div>
+</div>

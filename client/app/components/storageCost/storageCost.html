@@ -1,0 +1,202 @@
+</div>
+<div class="tab-pane" id="2b">
+  <div class="row">
+<div class="col-md-12">
+<div class="col-sm-3">
+           <div class="form-group">
+             <label class="control-label" for="product_name">MONTH</label>
+              <input type="text" id="price" name="yard_code" ng-model="$ctrl.query" value="" placeholder="" class="form-control">
+               <div class="row">
+
+                   <!-- <ul class="dropdown-menu">
+                     <li><a href="#">Action</a></li>
+                     <li><a href="#">Another action</a></li>
+                     <li><a href="#">Something else here</a></li>
+                     <li role="separator" class="divider"></li>
+                     <li><a href="#">Separated link</a></li>
+                   </ul> -->
+                 </div><!-- /btn-group -->
+
+
+       <!-- <input type="text" class="form-control" aria-label="..."> -->
+     </div><!-- /input-group -->
+   </div><!-- /.col-lg-6 -->
+   <div class="col-sm-2">
+                  <button class="btn btn-primary btn-sm m-t-d" ng-click="$ctrl.getCostCheck($ctrl.query)" type="submit">
+
+                    <span class="bold">Show List</span>
+                  </button>
+                  <button class="btn btn-primary btn-sm m-t-d" type="submit">
+
+                    <span class="bold" ng-click="$ctrl.clearList()">Cancel</span>
+                  </button>
+
+            </div>
+
+           </div>
+        </div>
+<!-- <div class="col-sm-3">
+           <div class="form-group">
+             <label class="control-label" for="product_name">Container No</label>
+             <input type="text" id="price" name="yard_code" value="" placeholder="" class="form-control">
+           </div>
+</div>
+<div class="col-sm-3">
+           <div class="form-group">
+             <label class="control-label" for="product_name">Container No</label>
+             <input type="text" id="price" name="yard_code" value="" placeholder="" class="form-control">
+           </div>
+</div> -->
+<table class="table table-striped table-bordered m-t">
+<thead>
+<tr class="t-head">
+<th>YARD</th>
+<th>FREE DAYS</th>
+<th>COST PER DAY(AFTER FREE DAYS)</th>
+<!-- <th>COST_PER_YEAR</th> -->
+<th colspan="12" class="text-center">AVERAGE STORAGE MONTHS</th>
+<th>AVERAGE</th>
+</tr>
+<tr class="t-head">
+<th></th><th></th><th></th>
+<th>1</th><th> 2</th><th> 3</th><th> 4</th><th> 5</th><th> 6</th><th> 7</th><th> 8 </th><th>9</th><th> 10</th><th> 11</th><th> 12 </th>
+<th></th>
+
+
+
+</tr>
+
+
+</thead>
+<tbody>
+<tr ng-repeat="value in $ctrl.cost track by $index"  ng-style="{{$ctrl.getCostComparision(value.YARD)}}">
+  <td>{{value.YARD}}</td>
+<td>{{value.FREEDAYS}}</td>
+<td>{{value.COST_PER_DAY}}</td>
+<td>{{value['12']}}</td>
+ <td>{{value['11']}}</td>
+<td>{{value['10']}}</td>
+<td>{{value['9']}}</td>
+<td>{{value['8']}}</td>
+<td>{{value['7']}}</td>
+<td>{{value['6']}}</td>
+<td>{{value['5']}}</td>
+<td>{{value['4']}}</td>
+<td>{{value['3']}}</td>
+<td>{{value['2']}}</td>
+<td>{{value['1']}}</td>
+<td>{{value.AVG}}</td>
+
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- <div class="tab-pane" id="3b">
+  <h3>We applied clearfix to the tab-content to rid of the gap between the tab and the content</h3>
+</div>
+  <div class="tab-pane" id="4b">
+  <h3>We use css to change the background color of the content to be equal to the tab</h3>
+</div> -->
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<!-- <main>
+  <nav class="navbar navbar-default" style="margin-bottom:30px">
+  <div>
+    <p class=" h1 text-center style" style="margin-top:5px">Storage Cost Comparision</p>
+  </div>
+</nav>
+
+
+<div class="col-md-12 col-lg-offset-0.2" style="background-color:ghostwhite " >
+
+  <div>
+     <div style="background-color:white" >
+
+  <table class="table table-bordered " style="margin-top:60px">
+
+    <thead style="background-color:#efebe9   ">
+      <tr >
+        <th class="text-center">SI NO</th>
+        <th class="text-center">YARD</th>
+        <th class="text-center">FREE DAYS</th>
+        <th class="text-center">COST PER DAYS(After Free Days)</th>
+<th class="text-center" colspan="12">AVERAGE STORE MONTHS </th>
+<th colspan="3" class="text-center">AVERAGE</th>
+
+
+ </tr>
+    </thead>
+    <tbody>
+      <tr style="background-color:#efebe9  ">
+      <td></td>
+      <td></td>
+       <td></td>
+       <td></td>
+       <td >12</td>
+       <td>11</td>
+<td>10</td>
+<td>9</td>
+<td>8</td>
+    <td>7</td>
+  <td>6</td>
+  <td>5</td>
+  <td>4</td>
+  <td>3</td>
+  <td>2</td>
+
+ <td>1</td>
+<td></td>
+</tr>
+      <tr ng-repeat="value in $ctrl.cost track by $index" ng-style="{{$ctrl.getCostComparision(value.YARD)}}" >
+      <!-- style="backgroundcolor: getRandomColor(x.YARD)" -->
+
+<!--
+        <th scope="row">{{$index+1}}</th>
+        <td>{{value.YARD}}</td>
+<td>{{value.FREEDAYS}}</td>
+<td>{{value.COST_PER_DAY}</td>
+<td>{{value.12}</td>
+<td>{{value.11}}</td>
+<td>{{value.10}}</td>
+<td>{{value.9}}</td>
+<td>{{value.8}}</td>
+ <td>{{value.7}}</td>
+<td>{{value.6}}</td>
+<td>{{value.5}}</td>
+<td>{{value.4}}</td>
+<td>{{value.3}}</td>
+<td>{{value.2}}</td>
+<td>{{value.1}}</td>
+<td>{{value.AVG}}</td>
+
+
+        </tr>
+<!--
+        <th scope="row">2</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@TwBootstrap</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr> -->
+    <!-- </tbody>
+  </table>
+</div>
+</div>
+</div> -->

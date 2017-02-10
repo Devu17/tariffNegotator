@@ -1,0 +1,25 @@
+
+/* change border radius for the tab , apply corners on top*/
+.table {
+  background-color: #fff;
+}
+#exTab3 .nav-pills > li > a {
+  border-radius: 4px 4px 0 0 ;
+}
+
+#exTab3 .tab-content {
+  color :#000;
+  background-color:#f8f8f8;
+  padding : 5px 15px;
+}
+.m-t{
+  margin-top:2%;
+}
+.m-t-d{
+  margin-top:16%;
+}
+
+
+
+
+

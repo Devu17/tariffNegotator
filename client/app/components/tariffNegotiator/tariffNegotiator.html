@@ -1,0 +1,213 @@
+
+<div class="tab-content clearfix">
+  <div class="tab-pane active" id="1b">
+  <div class="m-t">
+  <div class="input-group">
+    <div class="input-group" >
+          <input type="text" ng-disabled="true" ng-model="$ctrl.file.name" class="form-control" placeholder="Search File...">
+    <span class="input-group-btn">
+       <div   class="btn btn-primary " ngf-select ng-model="$ctrl.file" name="file" ngf-pattern="'.zip'"
+      ngf-accept="'.zip'" ngf-max-size="20MB">Choose File</div>
+    </span>
+    <div class="col-lg-offset-3 ">
+         <span class="input-group-btn" class="col-lg-1">
+             <button class="btn btn-primary" type="submit" ng-click="$ctrl.upload($ctrl.file)">Upload</button>
+
+
+  </div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<table class="table table-striped table-bordered m-t">
+<thead>
+<tr class="t-head">
+  <th>Sl No</th>
+  <th>YARD</th>
+  <th>Man_Hour_rate</th>
+  <th colspan="9">FACES</th>
+<th>COMPONENT</th>
+<th>REPAIR</th>
+<th colspan="3">SIZE</th>
+<th colspan="3">MAN HOURS</th>
+<th colspan="3">MATERIAL COST</th>
+</tr>
+ <tr class="t-head">
+  <th></th><th></th><th></th>
+  <th>D</th><th>E</th><th>F</th><th>L</th><th>I</th><th>R</th><th>T</th><th>U</th><th>B</th>
+  <th></th>
+  <th></th>
+
+  <th>Start</th><th>INC </th><th>Unit</th>
+    <th>INC</th><th>All/20</th><th>40.00</th>
+      <th>INC</th><th>All/20</th><th>40.00</th>
+  </tr>
+
+
+</thead>
+<tbody>
+<tr ng-repeat="x in $ctrl.current track by $index" ng-style="{{$ctrl.getRandomColor(x.YARD)}}">
+  <th scope="row">{{$index+1}}</th>
+  <td>{{x.YARD}}</td>
+  <td>{{x.Man_Hour_rate}}</td>
+  <td>{{x.FACES_D}}</td>
+  <td>{{x.FACES_E}}</td>
+  <td>{{x.FACES_F}}</td>
+  <td>{{x.FACES_L}}</td>
+  <td>{{x.FACES_I}}</td>
+  <td>{{x.FACES_R}}</td>
+  <td>{{x.FACES_T}}</td>
+  <td>{{x.FACES_U}}</td>
+  <td>{{x.FACES_B}}</td>
+  <td>{{x.COMPONENT}}</td>
+  <td>{{x.REPAIR}}</td>
+  <td>{{x.SIZE}}</td>
+  <td>{{x.SIZE_INC}}</td>
+  <td>{{x.SIZE_UNIT}}</td>
+  <td>{{x.MAN_HOURS_INC}}</td>
+  <td>{{x.MAN_HOURS_ALL_20}}</td>
+  <td>{{x.MAN_HOURS_40}}</td>
+  <td>{{x.MATERIAL_COST_INC}}</td>
+  <td>{{x.MATERIAL_COST_ALL_20}}</td>
+  <td>{{x.MATERIAL_COST_40}}</td>
+
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+
+
+
+
+<!-- <main>
+  <nav class="navbar navbar-default" style="margin-bottom:30px">
+  <div>
+    <p class=" h1 text-center style" style="margin-top:5px">Tariff Comparision</p>
+  </div>
+</nav>
+
+<div class="row" style="margin-bottom: 50px">
+   <div class="col-lg-6 col-lg-offset-3" >
+
+<div class="input-group" >
+      <input type="text" class="form-control" placeholder="Search File...">
+<span class="input-group-btn">
+   <div   class="btn btn-primary " ngf-select ng-model="$ctrl.file" name="file" ngf-pattern="'.zip'"
+  ngf-accept="'.zip'" ngf-max-size="20MB">Choose File</div>
+</span>
+<div class="col-lg-offset-3 ">
+     <span class="input-group-btn" class="col-lg-1">
+         <button class="btn btn-primary" type="submit" ng-click="$ctrl.upload($ctrl.file)">Upload</button>
+        <!-- <div class="button" ngf-select="upload($file)">Upload on file select</div> -->
+          <!-- </span>
+         </div><!-- /input-group -->
+
+
+
+
+
+<!-- <div class="col-md-12 col-lg-offset-0.2" style="background-color:ghostwhite " >
+
+  <div>
+     <div style="background-color:white" >
+
+  <table class="table table-bordered " style="margin-top:60px">
+
+    <thead style="background-color:#efebe9 ">
+      <tr >
+        <th>SI NO</th>
+        <th>YARD</th>
+        <th>MAN HOUR RATE</th>
+        <th colspan="9" class="text-center">  FACES</th>
+        <th>COMPONENTS </th>
+<th class="text-center">REPAIR</th>
+<th colspan="3" class="text-center">SIZE</th>
+<th colspan="3" class="text-center">MAN HOUR</th>
+<th colspan="3" class="text-center">MATERIAL COST</th> -->
+
+ <!-- </tr>
+    </thead>
+    <tbody>
+      <tr style="background-color:#efebe9 ">
+        <td> </td>
+        <td></td>
+        <td></td>
+
+ <th>D</th>
+ <th>E</th>
+ <th>F</th>
+ <th> L</th>
+ <th>I</th>
+ <th>R</th>
+ <th>T</th>
+ <th>U</th>
+ <th>B</th>
+
+<td></td>
+<td></td>
+
+  <th>START</th>
+  <th>INC</th>
+  <th>UNIT</th>
+
+  <th>INC</th>
+  <th>ALL/20</th>
+  <th>40.0</th>
+  <th>INC</th>
+  <th>ALL/20</th>
+  <th>40.0</th>
+
+      </tr>
+      <tr ng-repeat="x in $ctrl.current track by $index" ng-style="{{$ctrl.getRandomColor(x.YARD)}}" >
+      <!-- style="backgroundcolor: getRandomColor(x.YARD)" -->
+
+<!--
+        <th scope="row">{{$index+1}}</th>
+        <td>{{x.YARD}}</td>
+        <td>{{x.Man_Hour_rate}}</td>
+        <td>{{x.FACES_D}}</td>
+        <td>{{x.FACES_E}}</td>
+        <td>{{x.FACES_F}}</td>
+        <td>{{x.FACES_L}}</td>
+        <td>{{x.FACES_I}}</td>
+        <td>{{x.FACES_R}}</td>
+        <td>{{x.FACES_T}}</td>
+        <td>{{x.FACES_U}}</td>
+        <td>{{x.FACES_B}}</td>
+        <td>{{x.COMPONENT}}</td>
+        <td>{{x.REPAIR}}</td>
+        <td>{{x.SIZE}}</td>
+        <td>{{x.SIZE_INC}}</td>
+        <td>{{x.SIZE_UNIT}}</td>
+        <td>{{x.MAN_HOURS_INC}}</td>
+        <td>{{x.MAN_HOURS_ALL_20}}</td>
+        <td>{{x.MAN_HOURS_40}}</td>
+        <td>{{x.MATERIAL_COST_INC}}</td>
+        <td>{{x.MATERIAL_COST_ALL_20}}</td>
+        <td>{{x.MATERIAL_COST_40}}</td>
+
+        </tr> -->
+<!--
+        <th scope="row">2</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@TwBootstrap</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr> -->
+    <!-- </tbody>
+  </table>
+</div>
+</div>
+</div>
+
+
+</main>   -->

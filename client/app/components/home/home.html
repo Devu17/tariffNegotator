@@ -1,0 +1,35 @@
+<nav class="navbar navbar-default" role="navigation">
+   		 <div class="navbar-header">
+ 			<a href="#" class="navbar-brand">Tariff Negotiator Tool</a>
+ 		</div>
+
+</nav>
+<nav>
+
+
+<div class="container">
+  <div class="row">
+<div id="exTab3">
+<ul  class="nav nav-pills">
+			<li class="active" ng-class="{'active': $ctrl.tab == 'tariff'}">
+        <a ng-click="$ctrl.tab='tariff'" data-toggle="tab">Tariff Negotiator</a>
+			</li>
+			<li ng-class="{'active': $ctrl.tab == 'storage'}"><a ng-click="$ctrl.tab='storage'"  data-toggle="tab">Storage Comparison </a>
+			</li>
+			<!-- <li><a href="#3b" data-toggle="tab">Applying clearfix</a>
+			</li>
+  		<li><a href="#4a" data-toggle="tab">Background color</a>
+			</li> -->
+		</ul>
+
+			<div ng-show="$ctrl.tab=='tariff'"class="tab-content clearfix" id="1b">
+        <tariff-negotiator></tariff-negotiator>
+  </div>
+  <div ng-show="$ctrl.tab=='storage'" class="tab-content clearfix" id="2b">
+    <storage-cost></storage-cost>
+</div>
+</div>
+
+</div>
+
+</div>
